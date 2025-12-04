@@ -89,3 +89,9 @@ button{
     cursor: pointer;
     align-self: flex-end;
 }
+
+.hover-over{ 
+
+    border: 2px  dashed var(--text);
+   scale: 1.05;
+}
