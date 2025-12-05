@@ -8,11 +8,11 @@
 </head>
 <body>
 
-<main>  
+<main  class="main.bg">  
     <nav>
         <div class="left">Task Board</div>
         <div class="right">
-            <button>Add New Task</button>
+            <button  id="open-task-modal-btn"  >Add New Task</button>
         </div>
     </nav>
 
@@ -25,7 +25,7 @@
             </div>
 
             <div class="task1"   draggable="true">
-                <h2>Task 1</h2>
+                <h2 id="heading" >Task 1</h2>
                 <p>Description Example</p>
                 <button class="delete">Delete</button>
             </div>
@@ -46,6 +46,23 @@
         </div>
 
     </section>
+
+<div id="task-modal-overlay" class="modal-overlay">
+    <div class="add-task">
+        <h2>Add New Task</h2>
+        <div class="add-title">
+            <label for="task-title">Task Title:</label>
+            <input type="text" id="task-title" name="task-title" placeholder="Enter task title...">
+        </div>
+        <div class="add-desc">
+            <label for="task-description">Description:</label>
+            <textarea id="task-description" name="task-description" placeholder="Optional details..."></textarea>
+        </div>
+        <button id="close-task-modal-btn" type="button">Submit Task</button>
+    </div>
+</div>
+ 
+
 </main>
 
 
