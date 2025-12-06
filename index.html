@@ -1,72 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Board UI</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task Board UI</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
 
-<main  class="main.bg">  
-    <nav>
-        <div class="left">Task Board</div>
-        <div class="right">
-            <button  id="open-task-modal-btn"  >Add New Task</button>
-        </div>
-    </nav>
+    <main  class="main.bg">  
+        <nav>
+            <div class="left">Task Board</div>
+            <div class="right">
+                <button  id="open-task-modal-btn"  >Add New Task</button>
+            </div>
+        </nav>
 
-    <section class="board">
+        <section class="board">
 
-        <div class="task-coloum" id="Todo" >
-            <div class="heading">
-                <div>Start</div>
-                <div>Count</div>
+            <div class="task-coloum" id="Todo" >
+                <div class="heading">
+                    <div>Start</div>
+                    <div>Count</div>
+                </div>
+
+                <div class="task1"   draggable="true">
+                    <h2  id="taskvlaue">Task 1</h2>
+                    <p  id="display" >Description Example</p>
+                    <button class="delete">Delete</button>
+                </div>
             </div>
 
-            <div class="task1"   draggable="true">
-                <h2 id="heading" >Task 1</h2>
-                <p>Description Example</p>
-                <button class="delete">Delete</button>
+            <div class="task-coloum"  id="progress">
+                <div class="heading">
+                    <div>In Progress</div>
+                    <div>Count</div>
+                </div>
             </div>
-        </div>
 
-        <div class="task-coloum"  id="progress">
-            <div class="heading">
-                <div>In Progress</div>
-                <div>Count</div>
+            <div class="task-coloum"  id="Done" >
+                <div class="heading">
+                    <div>Done</div>
+                    <div>Count</div>
+                </div>
             </div>
-        </div>
 
-        <div class="task-coloum"  id="Done" >
-            <div class="heading">
-                <div>Done</div>
-                <div>Count</div>
+        </section>
+
+    <div id="task-modal-overlay" class="modal-overlay">
+        <div class="add-task">
+            <h2>Add New Task</h2>
+            <div class="add-title">
+                <label for="task-title">Task Title:</label>
+                <input type="text" id="inputTask" name="task-title" placeholder="Enter task title...">
             </div>
+            <div class="add-desc">
+                <label for="task-description">Description:</label>
+                <textarea id="task-description" name="task-description" placeholder="Optional details..."></textarea>
+            </div>
+            <button id="close-task-modal-btn" type="button">Submit Task</button>
         </div>
-
-    </section>
-
-<div id="task-modal-overlay" class="modal-overlay">
-    <div class="add-task">
-        <h2>Add New Task</h2>
-        <div class="add-title">
-            <label for="task-title">Task Title:</label>
-            <input type="text" id="task-title" name="task-title" placeholder="Enter task title...">
-        </div>
-        <div class="add-desc">
-            <label for="task-description">Description:</label>
-            <textarea id="task-description" name="task-description" placeholder="Optional details..."></textarea>
-        </div>
-        <button id="close-task-modal-btn" type="button">Submit Task</button>
     </div>
-</div>
- 
+    
 
-</main>
-
+    </main>
 
 
-<script src="script.js"></script>
-</body>
-</html>
+
+    <script src="script.js"></script>
+    </body>
+    </html>
